@@ -1,34 +1,88 @@
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset (100%);
+  clip: rect (0 0 0 0);
+  overflow: hidden;
+}
+.container {
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #434455;
   background-color: #ffffff;
 }
 button {
   cursor: pointer;
 }
+
+.header-container {
+  border-bottom: 1px solid #e7e9fc;
+  display: flex;
+  align-items: center;
+}
+.page-nav {
+  display: flex;
+  align-items: center;
+}
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  padding: 24px 0;
+  margin-right: 76px;
 }
 
 .text-blue {
   color: #2e2f42;
 }
 
+.page-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 .menu-link {
+  display: block;
+  padding: 24px 0;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -40,8 +94,17 @@ button {
 }
 .page-adress {
   font-style: normal;
+  margin-left: auto;
 }
+.address-el {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .address-link {
+  display: block;
+  padding: 24px 0;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -54,16 +117,26 @@ button {
 
 .hero {
   background-color: #2e2f42;
+  padding-bottom: 188px;
 }
 .hero-title {
+  max-width: 496px;
+  padding-top: 188px;
+  padding-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
   color: #ffffff;
 }
+
 .hero-button {
-  font-family: "Roboto", sans-serif;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -75,7 +148,19 @@ button {
 .hero-button:focus {
   background-color: #404bbf;
 }
+.advantages {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.adv-list {
+  display: flex;
+  gap: 24px;
+}
+.adv-list-el {
+  width: calc((100% - 3 * 24px) / 4);
+}
 .adv-element {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -89,9 +174,12 @@ button {
 }
 .team {
   background-color: #f4f4fd;
+  padding-bottom: 120px;
+  padding-top: 120px;
 }
 .team-list {
   background-color: #ffffff;
+  width: calc((100% - 3 * 24px) / 4);
 }
 .team-title {
   font-size: 36px;
@@ -100,6 +188,12 @@ button {
   text-transform: capitalize;
   text-align: center;
   color: #2e2f42;
+
+  padding-bottom: 72px;
+}
+.team-el {
+  display: flex;
+  gap: 24px;
 }
 .team-member {
   font-weight: 500;
@@ -108,12 +202,19 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-top: 32px;
+  margin-bottom: 8px;
 }
 .member-role {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-bottom: 32px;
+}
+.portfolio {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .portfolio-title {
   font-size: 36px;
@@ -122,8 +223,20 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  padding-bottom: 72px;
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+.portfolio-list-el {
+  width: calc((100% - 2 * 24px) / 3);
 }
 .portfolio-el {
+  margin-top: 32px;
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -131,6 +244,7 @@ button {
   color: #2e2f42;
 }
 .portfolio-el-type {
+  margin-bottom: 32px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -138,20 +252,25 @@ button {
 }
 .page-footer {
   background-color: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .footer-logo {
-  font-family: "Raleway", sans-serif;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-bottom: 16px;
 }
 .text-change {
   color: #f4f4fd;
 }
 .footer-text {
+  width: 264px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
