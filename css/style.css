@@ -246,6 +246,7 @@ button {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-left: 16px;
 }
 .portfolio-el-type {
   margin-bottom: 32px;
@@ -253,6 +254,7 @@ button {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding-left: 16px;
 }
 .page-footer {
   background-color: #2e2f42;
